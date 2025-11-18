@@ -204,41 +204,42 @@ useEffect(() => {
 
   return (
     <div className='flex flex-col text-3xl justify-center items-center'>
-        <div className='self-start'>
-             <button className='bg-emerald-400 px-4 py-1 text-xl rounded text-gray-700 hover:bg-emerald-300 active:scale-95 transition cursor-pointer m-5' onClick={back}>Back</button>
+        <div className='self-start flex gap-13'>
+             <button className='bg-emerald-400 px-4 py-1 text-xl rounded text-gray-700 hover:bg-emerald-300 active:scale-95 transition cursor-pointer m-2 sm:m-5' onClick={back}>Back</button>
+             <div className='block sm:hidden text-red-400 text-3xl pt-2 drop-shadow-[0_0_15px_red]'>{tie}</div>
         </div>
        <div>
             <div>
-            <h1 className="flex  gap-5 text-3xl font-bold text-center text-gray-800 py-3">
+            <h1 className="flex  gap-5 text-3xl font-bold text-center text-gray-800 py-1 sm:py-3">
             <div className={`${turn === "player1"?" text-green-500 drop-shadow-[0_0_15px_green] scale-110 animate-bounce font-bold transition": ""}`}>{player1}</div> <span className="text-red-500">vs</span><div className={`${turn === "player2"?" text-green-500 drop-shadow-[0_0_15px_green] scale-110 animate-bounce font-bold transition": ""}`}>{player2}</div>
             </h1>
             </div>
        </div>
-        <div className='flex justiy-cenetr items-center gap-10 '>
+        <div className='flex flex-col sm:flex-row justify-center items-center gap-2 sm:gap-6 sm:gap-10'>
           <div>       
-            <div className='w-50 h-50 bg-green-200 flex flex-col text-center rounded gap-5 p-10'>
+            <div className='w-30 h-30 sm:w-50 sm:h-50 bg-green-200 flex flex-col text-center rounded gap-5 p-5 sm:text-4xl sm:p-10'>
               <h1>{player1}</h1>
-              <div className="text-4xl font-bold text-red-500 animate-bounce bg-red-100 px-4 py-2 rounded-xl shadow-lg">{score1}</div>
+              <div className="text-2xl sm:text-4xl font-bold text-red-500 animate-bounce bg-red-100 sm:px-4 sm:py-2 px-2 py-1 rounded-xl shadow-lg ">{score1}</div>
             </div>   
           </div>
 
-            <div className="w-120 h-120 bg-black border-2 border-black rounded-lg ">
+            <div className="w-60 h-60 sm:w-120 sm:h-120 bg-black border-2 border-black rounded-lg ">
               <div className='grid grid-cols-3 grid-rows-3 gap-1 p-2'>
-                <div className="bg-white h-38 w-38"><button className='h-38 w-38 text-8xl active:scale-95 transition cursor-pointer' onClick={()=>press(b1,setB1)}>{b1}</button></div>
-                <div className="bg-white h-38 w-38"><button className='h-38 w-38 text-8xl active:scale-95 transition cursor-pointer' onClick={()=>press(b2,setB2)}>{b2}</button></div>
-                <div className="bg-white h-38 w-38"><button className='h-38 w-38 text-8xl active:scale-95 transition cursor-pointer' onClick={()=>press(b3,setB3)}>{b3}</button></div>
-                <div className="bg-white h-38 w-38"><button className='h-38 w-38 text-8xl active:scale-95 transition cursor-pointer' onClick={()=>press(b4,setB4)}>{b4}</button></div>
-                <div className="bg-white h-38 w-38"><button className='h-38 w-38 text-8xl active:scale-95 transition cursor-pointer' onClick={()=>press(b5,setB5)}>{b5}</button></div>
-                <div className="bg-white h-38 w-38"><button className='h-38 w-38 text-8xl active:scale-95 transition cursor-pointer' onClick={()=>press(b6,setB6)}>{b6}</button></div>
-                <div className="bg-white h-38 w-38"><button className='h-38 w-38 text-8xl active:scale-95 transition cursor-pointer' onClick={()=>press(b7,setB7)}>{b7}</button></div>
-                <div className="bg-white h-38 w-38"><button className='h-38 w-38 text-8xl active:scale-95 transition cursor-pointer' onClick={()=>press(b8,setB8)}>{b8}</button></div>
-                <div className="bg-white h-38 w-38"><button className='h-38 w-38 text-8xl active:scale-95 transition cursor-pointer' onClick={()=>press(b9,setB9)}>{b9}</button></div>
+                <div className="bg-white w-18 h-18 sm:h-38 sm:w-38 "><button className='w-18 h-18 sm:h-38 sm:w-38 text-5xl sm:text-8xl active:scale-95 transition cursor-pointer' onClick={()=>press(b1,setB1)}>{b1}</button></div>
+                <div className="bg-white w-18 h-18 sm:h-38 sm:w-38"><button className='w-18 h-18 sm:h-38 sm:w-38 text-5xl sm:text-8xl active:scale-95 transition cursor-pointer' onClick={()=>press(b2,setB2)}>{b2}</button></div>
+                <div className="bg-white w-18 h-18 sm:h-38 sm:w-38"><button className='w-18 h-18 sm:h-38 sm:w-38 text-5xl sm:text-8xl active:scale-95 transition cursor-pointer' onClick={()=>press(b3,setB3)}>{b3}</button></div>
+                <div className="bg-white w-18 h-18 sm:h-38 sm:w-38"><button className='w-18 h-18 sm:h-38 sm:w-38 text-5xl sm:text-8xl active:scale-95 transition cursor-pointer' onClick={()=>press(b4,setB4)}>{b4}</button></div>
+                <div className="bg-white w-18 h-18 sm:h-38 sm:w-38"><button className='w-18 h-18 sm:h-38 sm:w-38 text-5xl sm:text-8xl active:scale-95 transition cursor-pointer' onClick={()=>press(b5,setB5)}>{b5}</button></div>
+                <div className="bg-white w-18 h-18 sm:h-38 sm:w-38"><button className='w-18 h-18 sm:h-38 sm:w-38 text-5xl sm:text-8xl active:scale-95 transition cursor-pointer' onClick={()=>press(b6,setB6)}>{b6}</button></div>
+                <div className="bg-white w-18 h-18 sm:h-38 sm:w-38"><button className='w-18 h-18 sm:h-38 sm:w-38 text-5xl sm:text-8xl active:scale-95 transition cursor-pointer' onClick={()=>press(b7,setB7)}>{b7}</button></div>
+                <div className="bg-white w-18 h-18 sm:h-38 sm:w-38"><button className='w-18 h-18 sm:h-38 sm:w-38 text-5xl sm:text-8xl active:scale-95 transition cursor-pointer' onClick={()=>press(b8,setB8)}>{b8}</button></div>
+                <div className="bg-white w-18 h-18 sm:h-38 sm:w-38"><button className='w-18 h-18 sm:h-38 sm:w-38 text-5xl sm:text-8xl active:scale-95 transition cursor-pointer' onClick={()=>press(b9,setB9)}>{b9}</button></div>
               </div>
             </div>
             <div>
-            <div className='w-50 h-50 bg-green-200 flex flex-col text-center rounded gap-5 p-10'>
+            <div className='w-30 h-30 sm:w-50 sm:h-50 bg-green-200 flex flex-col text-center rounded gap-5 p-5 sm:text-4xl sm:p-10'>
               <h1 className=''>{player2}</h1>
-              <div className="text-4xl font-bold text-red-500 animate-bounce bg-red-100 px-4 py-2 rounded-xl shadow-lg">{score2}</div>
+              <div className="text-2xl sm:text-4xl font-bold text-red-500 animate-bounce bg-red-100 sm:px-4 sm:py-2 px-2 py-1 rounded-xl shadow-lg">{score2}</div>
             </div>
             </div>  
         </div>

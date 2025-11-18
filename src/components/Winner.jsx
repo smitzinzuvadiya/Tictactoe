@@ -44,11 +44,11 @@ const Winner = () => {
     <div className='flex justify-center items-center h-150'>
         <div className='flex flex-col justify-center items-center'>
 
-            <h1 className="text-5xl font-extrabold text-yellow-400 drop-shadow-lg animate-pulse">
+            <h1 className="text-2xl sm:text-5xl font-extrabold text-yellow-400 drop-shadow-lg animate-pulse">
                🎉 The Winner is {winner}! 🎉
             </h1>
 
-            <div className='flex gap-5 p-10'>
+            <div className='flex gap-5 sm:p-10 '>
                 <button className='bg-emerald-400 px-4 py-1 text-xl rounded text-gray-700 hover:bg-emerald-300 active:scale-95 transition cursor-pointer m-5' onClick={playagain}>Play Again</button>
                 <button className='bg-emerald-400 px-4 py-1 text-xl rounded text-gray-700 hover:bg-emerald-300 active:scale-95 transition cursor-pointer m-5' onClick={restart}>Restart</button>
             </div>

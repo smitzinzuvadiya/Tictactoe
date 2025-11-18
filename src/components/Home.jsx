@@ -39,11 +39,11 @@ const Home = () => {
         <div className='flex flex-col gap-5 text-2xl'>
             <div className='flex gap-2 justify-center items-center'>
                 <label>Player 1 : </label>
-                <input type='text' className='bg-white outline-none rounded' onChange={(e)=>{setPlayer1(e.target.value)}} required></input>
+                <input type='text' className='bg-white outline-none rounded w-50 sm:w-[274.4px]' onChange={(e)=>{setPlayer1(e.target.value)}} required></input>
             </div>
             <div className='flex gap-2 justify-center items-center'>
                 <label>Player 2 : </label>
-                <input type='text' className='bg-white outline-none rounded' onChange={(e)=>{setPlayer2(e.target.value)}} required></input>
+                <input type='text' className='bg-white outline-none rounded w-50 sm:w-[274.4px]' onChange={(e)=>{setPlayer2(e.target.value)}} required></input>
             </div>
         </div>
         <button className='bg-emerald-400 px-4 py-1 text-xl rounded text-gray-700 hover:bg-emerald-300 active:scale-95 transition cursor-pointer' onClick={saveName}>Submit</button>
