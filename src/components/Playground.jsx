@@ -243,7 +243,7 @@ useEffect(() => {
             </div>
             </div>  
         </div>
-        <div className='text-red-400 text-5xl pt-2 drop-shadow-[0_0_15px_red]'>{tie}</div>
+        <div className='text-red-400 text-5xl pt-2 drop-shadow-[0_0_15px_red] sm:block hidden'>{tie}</div>
     </div>
   )
 } 
